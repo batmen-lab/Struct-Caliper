@@ -1,0 +1,7 @@
+# Wrappers (src/)
+biopython>=1.85
+numpy>=2.0
+pandas>=2.2
+tqdm>=4.66
+# Tutorial notebooks (tutorial/)
+matplotlib>=3.9

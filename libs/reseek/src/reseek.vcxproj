@@ -1,0 +1,569 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{D30DAE74-D358-4329-B815-47360BA541D9}</ProjectGuid>
+    <RootNamespace>reseek</RootNamespace>
+    <Keyword>Win32Proj</Keyword>
+    <ProjectName>reseek</ProjectName>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <WholeProgramOptimization>false</WholeProgramOptimization>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <CharacterSet>NotSet</CharacterSet>
+    <WholeProgramOptimization>false</WholeProgramOptimization>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <CharacterSet>NotSet</CharacterSet>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.30319.1</_ProjectFileVersion>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(SolutionDir)$(Configuration)\</OutDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(SolutionDir)$(Configuration)\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(Configuration)\</IntDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(Configuration)\</IntDir>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</LinkIncremental>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</LinkIncremental>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(SolutionDir)$(Configuration)\</OutDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(SolutionDir)$(Configuration)\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(Configuration)\</IntDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(Configuration)\</IntDir>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkIncremental>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkIncremental>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</GenerateManifest>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</GenerateManifest>
+    <PreBuildEventUseInBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</PreBuildEventUseInBuild>
+    <PreBuildEventUseInBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</PreBuildEventUseInBuild>
+    <PreBuildEventUseInBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</PreBuildEventUseInBuild>
+    <PreBuildEventUseInBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</PreBuildEventUseInBuild>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <PreBuildEvent>
+      <Message>svnversion.bat</Message>
+      <Command>call c:/bat/svnversion.bat</Command>
+    </PreBuildEvent>
+    <CustomBuildStep>
+      <Message>
+      </Message>
+      <Command>
+      </Command>
+      <Outputs>%(Outputs)</Outputs>
+    </CustomBuildStep>
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions);_CRT_SECURE_NO_WARNINGS;_HAS_ITERATOR_DEBUGGING=0;_SECURE_SCL=0</PreprocessorDefinitions>
+      <MinimalRebuild>false</MinimalRebuild>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <OpenMPSupport>true</OpenMPSupport>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>psapi.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Console</SubSystem>
+      <TargetMachine>MachineX86</TargetMachine>
+      <ImageHasSafeExceptionHandlers>false</ImageHasSafeExceptionHandlers>
+    </Link>
+    <PostBuildEvent>
+      <Command>
+      </Command>
+    </PostBuildEvent>
+    <PostBuildEvent>
+      <Message>
+      </Message>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <PreBuildEvent>
+      <Message>svnversion.bat</Message>
+      <Command>call c:/bat/svnversion.bat</Command>
+    </PreBuildEvent>
+    <CustomBuildStep>
+      <Message>
+      </Message>
+      <Command>
+      </Command>
+      <Outputs>%(Outputs)</Outputs>
+    </CustomBuildStep>
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions);_CRT_SECURE_NO_WARNINGS;</PreprocessorDefinitions>
+      <MinimalRebuild>false</MinimalRebuild>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <OpenMPSupport>true</OpenMPSupport>
+      <LanguageStandard>stdcpp20</LanguageStandard>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>psapi.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Console</SubSystem>
+      <ImageHasSafeExceptionHandlers>false</ImageHasSafeExceptionHandlers>
+    </Link>
+    <PostBuildEvent>
+      <Command>
+      </Command>
+    </PostBuildEvent>
+    <PostBuildEvent>
+      <Message>
+      </Message>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <PreBuildEvent>
+      <Message>svnversion.bat</Message>
+      <Command>call c:/bat/svnversion.bat</Command>
+    </PreBuildEvent>
+    <CustomBuildStep>
+      <Message>
+      </Message>
+      <Command>
+      </Command>
+      <Outputs>%(Outputs)</Outputs>
+    </CustomBuildStep>
+    <ClCompile>
+      <Optimization>MaxSpeed</Optimization>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <FavorSizeOrSpeed>Speed</FavorSizeOrSpeed>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions);_CRT_SECURE_NO_WARNINGS;</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <BufferSecurityCheck>false</BufferSecurityCheck>
+      <FloatingPointModel>Fast</FloatingPointModel>
+      <OmitFramePointers>false</OmitFramePointers>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <RuntimeTypeInfo>false</RuntimeTypeInfo>
+      <WholeProgramOptimization>false</WholeProgramOptimization>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <OpenMPSupport>true</OpenMPSupport>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>psapi.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Console</SubSystem>
+      <OptimizeReferences>true</OptimizeReferences>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <TargetMachine>MachineX86</TargetMachine>
+      <OutputFile>$(OutDir)$(TargetName)$(TargetExt)</OutputFile>
+      <LinkTimeCodeGeneration>Default</LinkTimeCodeGeneration>
+    </Link>
+    <PostBuildEvent>
+      <Command>
+      </Command>
+    </PostBuildEvent>
+    <PostBuildEvent>
+      <Message>
+      </Message>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <PreBuildEvent>
+      <Message>svnversion.bat</Message>
+      <Command>call c:/bat/svnversion.bat</Command>
+    </PreBuildEvent>
+    <CustomBuildStep>
+      <Message>
+      </Message>
+      <Command>
+      </Command>
+      <Outputs>%(Outputs)</Outputs>
+    </CustomBuildStep>
+    <ClCompile>
+      <Optimization>MaxSpeed</Optimization>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <FavorSizeOrSpeed>Speed</FavorSizeOrSpeed>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions);_CRT_SECURE_NO_WARNINGS;</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <BufferSecurityCheck>false</BufferSecurityCheck>
+      <FloatingPointModel>Fast</FloatingPointModel>
+      <OmitFramePointers>false</OmitFramePointers>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <RuntimeTypeInfo>false</RuntimeTypeInfo>
+      <WholeProgramOptimization>false</WholeProgramOptimization>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <OpenMPSupport>true</OpenMPSupport>
+      <LanguageStandard>stdcpp20</LanguageStandard>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>psapi.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Console</SubSystem>
+      <OptimizeReferences>true</OptimizeReferences>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OutputFile>$(OutDir)$(TargetName)$(TargetExt)</OutputFile>
+      <LinkTimeCodeGeneration>Default</LinkTimeCodeGeneration>
+    </Link>
+    <PostBuildEvent>
+      <Command>
+      </Command>
+    </PostBuildEvent>
+    <PostBuildEvent>
+      <Message>
+      </Message>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="abcxyz.cpp" />
+    <ClCompile Include="adler32.c" />
+    <ClCompile Include="alignselfrev.cpp" />
+    <ClCompile Include="align_bag.cpp" />
+    <ClCompile Include="alpha.cpp" />
+    <ClCompile Include="alpha2.cpp" />
+    <ClCompile Include="b62.cpp" />
+    <ClCompile Include="bcadata.cpp" />
+    <ClCompile Include="cca.cpp" />
+    <ClCompile Include="cmd_prefiltermu.cpp" />
+    <ClCompile Include="convert_foldseekdb.cpp" />
+    <ClCompile Include="create_foldseekdb.cpp" />
+    <ClCompile Include="diaghsp.cpp" />
+    <ClCompile Include="duper.cpp" />
+    <ClCompile Include="foldseek_utils.cpp" />
+    <ClCompile Include="global.cpp" />
+    <ClCompile Include="binner.cpp" />
+    <ClCompile Include="lddt_bench.cpp" />
+    <ClCompile Include="mmseqs_index_dump.cpp" />
+    <ClCompile Include="muprefilter.cpp" />
+    <ClCompile Include="mymutex.cpp" />
+    <ClCompile Include="prefiltermu.cpp" />
+    <ClCompile Include="prepare_query.cpp" />
+    <ClCompile Include="rankedscoresbag.cpp" />
+    <ClCompile Include="cif2pdb.cpp" />
+    <ClCompile Include="search.cpp" />
+    <ClCompile Include="blosum.cpp" />
+    <ClCompile Include="blosum62.cpp" />
+    <ClCompile Include="calibrate.cpp" />
+    <ClCompile Include="calibrate2.cpp" />
+    <ClCompile Include="calibrate3.cpp" />
+    <ClCompile Include="calibrate5.cpp" />
+    <ClCompile Include="calibrate5a.cpp" />
+    <ClCompile Include="calibrate7.cpp" />
+    <ClCompile Include="calibratesearcher.cpp" />
+    <ClCompile Include="calibrate_masm.cpp" />
+    <ClCompile Include="chainbag.cpp" />
+    <ClCompile Include="chainer.cpp" />
+    <ClCompile Include="chainreader2.cpp" />
+    <ClCompile Include="chains2pdbs.cpp" />
+    <ClCompile Include="cif.cpp" />
+    <ClCompile Include="cigar.cpp" />
+    <ClCompile Include="cmprof.cpp" />
+    <ClCompile Include="cmprof_train.cpp" />
+    <ClCompile Include="convert.cpp" />
+    <ClCompile Include="convert2mu.cpp" />
+    <ClCompile Include="crc32.c" />
+    <ClCompile Include="daliscorer.cpp" />
+    <ClCompile Include="daliscore_msas2.cpp" />
+    <ClCompile Include="daliscore_msa.cpp" />
+    <ClCompile Include="daliscore_msas.cpp" />
+    <ClCompile Include="daliscore_tsv.cpp" />
+    <ClCompile Include="deflate.c" />
+    <ClCompile Include="diag.cpp" />
+    <ClCompile Include="distmx.cpp" />
+    <ClCompile Include="explore1.cpp" />
+    <ClCompile Include="getchains.cpp" />
+    <ClCompile Include="lddt.cpp" />
+    <ClCompile Include="lddt_foldmason.cpp" />
+    <ClCompile Include="lddt_msa.cpp" />
+    <ClCompile Include="lddt_msas.cpp" />
+    <ClCompile Include="lddt_msa_foldmason.cpp" />
+    <ClCompile Include="lddt_muscle.cpp" />
+    <ClCompile Include="mudex.cpp" />
+    <ClCompile Include="mukmerfilter.cpp" />
+    <ClCompile Include="mermx.cpp" />
+    <ClCompile Include="msta_lddtmuw1.cpp" />
+    <ClCompile Include="msta_lddtmuw.cpp" />
+    <ClCompile Include="msta_score.cpp" />
+    <ClCompile Include="msta_scores.cpp" />
+    <ClCompile Include="mukmerfilter2.cpp" />
+    <ClCompile Include="museqsource.cpp" />
+    <ClCompile Include="mu_mapping.cpp" />
+    <ClCompile Include="alignpair.cpp" />
+    <ClCompile Include="mymalloc.cpp" />
+    <ClCompile Include="mymalloc_dbg.cpp" />
+    <ClCompile Include="mymalloc_gcc.cpp" />
+    <ClCompile Include="mymalloc_win_debug.cpp" />
+    <ClCompile Include="objcounter.cpp" />
+    <ClCompile Include="output.cpp" />
+    <ClCompile Include="pdb.cpp" />
+    <ClCompile Include="postmufilter.cpp" />
+    <ClCompile Include="prime.cpp" />
+    <ClCompile Include="profileloader.cpp" />
+    <ClCompile Include="md5.cpp" />
+    <ClCompile Include="pdbchaincal.cpp" />
+    <ClCompile Include="pdbfilescanner.cpp" />
+    <ClCompile Include="gumbel.cpp" />
+    <ClCompile Include="gzipfileio.cpp" />
+    <ClCompile Include="gzlib.c" />
+    <ClCompile Include="gzread.c" />
+    <ClCompile Include="infback.c" />
+    <ClCompile Include="inffast.c" />
+    <ClCompile Include="inflate.c" />
+    <ClCompile Include="inftrees.c" />
+    <ClCompile Include="linereader2.cpp" />
+    <ClCompile Include="parasail.cpp" />
+    <ClCompile Include="parasail_cigar.cpp" />
+    <ClCompile Include="parasail_mu.cpp" />
+    <ClCompile Include="pdb2mega.cpp" />
+    <ClCompile Include="readhits.cpp" />
+    <ClCompile Include="runquery.cpp" />
+    <ClCompile Include="runself.cpp" />
+    <ClCompile Include="runthreads.cpp" />
+    <ClCompile Include="scop40bit.cpp" />
+    <ClCompile Include="mumx.cpp" />
+    <ClCompile Include="mumx_data.cpp" />
+    <ClCompile Include="dali.cpp" />
+    <ClCompile Include="dbsearcher.cpp" />
+    <ClCompile Include="derepper.cpp" />
+    <ClCompile Include="dss.cpp" />
+    <ClCompile Include="dssaligner.cpp" />
+    <ClCompile Include="dssparams.cpp" />
+    <ClCompile Include="features.cpp" />
+    <ClCompile Include="float_feature_bins.cpp" />
+    <ClCompile Include="getbins.cpp" />
+    <ClCompile Include="kabsch.cpp" />
+    <ClCompile Include="logaln.cpp" />
+    <ClCompile Include="logodds.cpp" />
+    <ClCompile Include="mergefwdback.cpp" />
+    <ClCompile Include="msa2cmp.cpp" />
+    <ClCompile Include="murmurhash.cpp" />
+    <ClCompile Include="myss.cpp" />
+    <ClCompile Include="namedparams.cpp" />
+    <ClCompile Include="prettyaln.cpp" />
+    <ClCompile Include="scalar_sweep.cpp" />
+    <ClCompile Include="scop40bench.cpp" />
+    <ClCompile Include="scop40benchroc.cpp" />
+    <ClCompile Include="seqfeeder.cpp" />
+    <ClCompile Include="shuffle.cpp" />
+    <ClCompile Include="split.cpp" />
+    <ClCompile Include="statsig.cpp" />
+    <ClCompile Include="sweeper.cpp" />
+    <ClCompile Include="swfastpinop.cpp" />
+    <ClCompile Include="swfastpinopgapless.cpp" />
+    <ClCompile Include="swgapless.cpp" />
+    <ClCompile Include="swgaplessint.cpp" />
+    <ClCompile Include="swgaplessprof.cpp" />
+    <ClCompile Include="swgaplessprofb.cpp" />
+    <ClCompile Include="testmodel.cpp" />
+    <ClCompile Include="testmodel2.cpp" />
+    <ClCompile Include="test_chrono_ticks.cpp" />
+    <ClCompile Include="test_para.cpp" />
+    <ClCompile Include="test_para_cal.cpp" />
+    <ClCompile Include="test_para_path.cpp" />
+    <ClCompile Include="test_xdrop.cpp" />
+    <ClCompile Include="timing.cpp" />
+    <ClCompile Include="tracealn.cpp" />
+    <ClCompile Include="tracebackbitmem.cpp" />
+    <ClCompile Include="trained_features.cpp" />
+    <ClCompile Include="train_features.cpp" />
+    <ClCompile Include="trees.c" />
+    <ClCompile Include="twohitdiag.cpp" />
+    <ClCompile Include="userfields.cpp" />
+    <ClCompile Include="valuetoint.cpp" />
+    <ClCompile Include="one2three.cpp" />
+    <ClCompile Include="fastaseqsource.cpp" />
+    <ClCompile Include="fileseqsource.cpp" />
+    <ClCompile Include="getss.cpp" />
+    <ClCompile Include="sscluster.cpp" />
+    <ClCompile Include="trainer.cpp" />
+    <ClCompile Include="usage.cpp" />
+    <ClCompile Include="linereader.cpp" />
+    <ClCompile Include="mx.cpp" />
+    <ClCompile Include="myutils.cpp" />
+    <ClCompile Include="objmgr.cpp" />
+    <ClCompile Include="reseek_main.cpp" />
+    <ClCompile Include="readchains.cpp" />
+    <ClCompile Include="pdbchain.cpp" />
+    <ClCompile Include="quarts.cpp" />
+    <ClCompile Include="spher.cpp" />
+    <ClCompile Include="sw.cpp" />
+    <ClCompile Include="seqdb.cpp" />
+    <ClCompile Include="seqinfo.cpp" />
+    <ClCompile Include="seqsource.cpp" />
+    <ClCompile Include="sfasta.cpp" />
+    <ClCompile Include="sort.cpp" />
+    <ClCompile Include="viterbifastmem.cpp" />
+    <ClCompile Include="writelocalaln.cpp" />
+    <ClCompile Include="xdropbwd.cpp" />
+    <ClCompile Include="xdropfwd.cpp" />
+    <ClCompile Include="xdrophsp.cpp" />
+    <ClCompile Include="zscorer.cpp" />
+    <ClCompile Include="zutil.c" />
+    <ClInclude Include="bcadata.h" />
+    <ClInclude Include="binner.h" />
+    <ClInclude Include="calibratesearcher.h" />
+    <ClInclude Include="calibratesearcher2.h" />
+    <ClInclude Include="chainbag.h" />
+    <ClInclude Include="chainer.h" />
+    <ClInclude Include="chainreader2.h" />
+    <ClInclude Include="cif.h" />
+    <ClInclude Include="cigar.h" />
+    <ClInclude Include="cigar_template.h" />
+    <ClInclude Include="cmprof.h" />
+    <ClInclude Include="diag.h" />
+    <ClInclude Include="diaghsp.h" />
+    <ClInclude Include="duper.h" />
+    <ClInclude Include="mudex.h" />
+    <ClInclude Include="mukmerfilter.h" />
+    <ClInclude Include="mumx.h" />
+    <ClInclude Include="counters.h" />
+    <ClInclude Include="crc32.h" />
+    <ClInclude Include="daliscorer.h" />
+    <ClInclude Include="dbsearcher.h" />
+    <ClInclude Include="deflate.h" />
+    <ClInclude Include="derepper.h" />
+    <ClInclude Include="distmxsearcher.h" />
+    <ClInclude Include="dss.h" />
+    <ClInclude Include="dssaligner.h" />
+    <ClInclude Include="dssp.h" />
+    <ClInclude Include="dssparams.h" />
+    <ClInclude Include="fasterf.h" />
+    <ClInclude Include="featurelist.h" />
+    <ClInclude Include="features.h" />
+    <ClInclude Include="mermx.h" />
+    <ClInclude Include="museqsource.h" />
+    <ClInclude Include="myallocator.h" />
+    <ClInclude Include="mymalloc.h" />
+    <ClInclude Include="mymutex.h" />
+    <ClInclude Include="objcounter.h" />
+    <ClInclude Include="output.h" />
+    <ClInclude Include="pdbfilescanner.h" />
+    <ClInclude Include="filler.h" />
+    <ClInclude Include="floatfeatures.h" />
+    <ClInclude Include="getticks.h" />
+    <ClInclude Include="gzguts.h" />
+    <ClInclude Include="inffast.h" />
+    <ClInclude Include="inffixed.h" />
+    <ClInclude Include="inflate.h" />
+    <ClInclude Include="inftrees.h" />
+    <ClInclude Include="intfeatures.h" />
+    <ClInclude Include="linereader2.h" />
+    <ClInclude Include="megacluster.h" />
+    <ClInclude Include="logodds.h" />
+    <ClInclude Include="murmur.h" />
+    <ClInclude Include="mx.h" />
+    <ClInclude Include="obj.h" />
+    <ClInclude Include="objmgr.h" />
+    <ClInclude Include="objtype.h" />
+    <ClInclude Include="objtypes.h" />
+    <ClInclude Include="parasail.h" />
+    <ClInclude Include="prefiltermu.h" />
+    <ClInclude Include="prefiltermuparams.h" />
+    <ClInclude Include="primes.h" />
+    <ClInclude Include="profileloader.h" />
+    <ClInclude Include="rankedscoresbag.h" />
+    <ClInclude Include="reseek_calibrate.h" />
+    <ClInclude Include="scalarparams.h" />
+    <ClInclude Include="scop40bench.h" />
+    <ClInclude Include="seqfeeder.h" />
+    <ClInclude Include="seqinfo.h" />
+    <ClInclude Include="spher.h" />
+    <ClInclude Include="statsig.h" />
+    <ClInclude Include="sweeper.h" />
+    <ClInclude Include="swtrace.h" />
+    <ClInclude Include="timers.h" />
+    <ClInclude Include="timing.h" />
+    <ClInclude Include="tracebit.h" />
+    <ClInclude Include="trainer.h" />
+    <ClInclude Include="trees.h" />
+    <ClInclude Include="twohitdiag.h" />
+    <ClInclude Include="usage.h" />
+    <ClInclude Include="userfieldnames.h" />
+    <ClInclude Include="userfields.h" />
+    <ClInclude Include="xdpmem.h" />
+    <ClInclude Include="zconf.h" />
+    <ClInclude Include="zlib.h" />
+    <ClInclude Include="zutil.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="abcxyz.h" />
+    <ClInclude Include="alpha.h" />
+    <ClInclude Include="best.h" />
+    <ClInclude Include="cmds.h" />
+    <ClInclude Include="fastaseqsource.h" />
+    <ClInclude Include="fileseqsource.h" />
+    <ClInclude Include="gobuff.h" />
+    <ClInclude Include="linereader.h" />
+    <ClInclude Include="myopts.h" />
+    <ClInclude Include="myutils.h" />
+    <ClInclude Include="pathinfo.h" />
+    <ClInclude Include="pdbchain.h" />
+    <ClInclude Include="quarts.h" />
+    <ClInclude Include="seqdb.h" />
+    <ClInclude Include="seqsource.h" />
+    <ClInclude Include="sfasta.h" />
+    <ClInclude Include="sfastq.h" />
+    <ClInclude Include="sort.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="train_features2cpp.py" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

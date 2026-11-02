@@ -1,0 +1,6 @@
+Makefile
+MSBuild.log
+make.stdout
+make.stderr
+gitver.txt
+vcxproj_make.py
