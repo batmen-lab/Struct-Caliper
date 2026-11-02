@@ -101,7 +101,7 @@ p-values, it would get if searched on its own.
 
 ```bash
 python src/foldseek.py \
-    --foldseek_url bin/foldseek \
+    --foldseek_url foldseek \
     --lookup_url data/lookup/m50.txt \
     --num_shuffle 50 \
     --seed 1 \
@@ -147,18 +147,18 @@ input databases are left untouched; default runs perform fresh searches.
 
 ## Run Reseek with Struct-Caliper
 
-Unlike Foldseek, in which its `createdb` command automatically converts structure files like .ent and .pdb to its native databases, Reseek requires manual conversion of query files. Queries and targets must be Reseek `.bca` files. A `.bca` can hold one query or many:
+Unlike Foldseek, in which its `createdb` command automatically converts structure files like .ent and .pdb to its native databases, Reseek requires manual conversion of query files. Queries and targets must be Reseek `.bca` files. A `.bca` can hold one query or a directory of queries:
 
 ```bash
-bin/reseek -convert query.pdb -bca query.bca          # one structure
-bin/reseek -convert structures/ -bca queries.bca      # a directory of structures
+reseek -convert query.pdb -bca query.bca          # one structure
+reseek -convert structures/ -bca queries.bca      # a directory of structures
 ```
 
 Then run `reseek.py`:
 
 ```bash
 python src/reseek.py \
-    --reseek_url bin/reseek \
+    --reseek_url reseek \
     --lookup_url data/lookup/m50.txt \
     --num_shuffle 50 \
     search \
@@ -191,7 +191,7 @@ slightly different SG p-values.
 
 ## Data
 
-The paper's data are on Zenodo: **DOI: `https://doi.org/10.5281/zenodo.23872787`** 
+The paper's data are on [Zenodo](https://doi.org/10.5281/zenodo.23872787):
 There is one `data_` archive (experiment inputs) and one `results_` archive (processed
 results) per experiment. Results include:
 - query identifiers and reference labels;
